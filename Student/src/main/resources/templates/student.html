@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link th:href="@{/css/index.css}" rel="stylesheet">
+	<script th:src="@{/js/index.js}"></script>
+	<title>メニュー</title>
+</head>
+
+<body>
+	<header>
+		<h1>メニューを選択してください</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<form th:action="@{/selectStudent}" method="post">
+		<input type="submit" value="照会" name="select">
+	</form>
+	<form th:action="@{/addStudent}" method="post">
+		<input type="submit" value="追加" name="add">
+	</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+
+}
+
+header {
+	background-color: #cccccc;
+	padding: 20px;
+	padding-left: 50px;
+}
+
+header h1 {
+	margin: 0;
+	color: white;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+input {
+	border: 2px solid transparent;
+	background-color: transparent;
+	border-bottom: 2px solid #999;
+}
+
+input:hover {
+	background-color:#cccccc;
+	border-bottom: 2px solid #999;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	margin-top: 20px;
+
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}

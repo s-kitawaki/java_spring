@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+}
+
+
+/*機能選択ボタン　照会・追加 */
+input[type="submit"] {
+	background-color: #cccccc;
+	color: white;
+	width:auto;
+	float: left;
+	border:none;
+	border-radius: 0.3rem;
+	padding:15px;
+	width:100px;
+	margin:25px;
+	margin-left: 50px;
+	margin-top: 35px;
+	color: black;
+}
+
+input:hover {
+	background-color:#808080;
+}
+
+
+/*ヘッダー部分 */
+header {
+	background-color: #cccccc;
+	padding: 20px;
+	padding-left: 50px;
+}
+
+header h1 {
+	margin: 0;
+	color: white;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin-right: 10px;
+}
+
+nav a {
+	padding: 8px;
+	color: white;
+	text-decoration: none;
+}
+
+/*フッター部分（今回未使用） */
+footer {
+	background-color: #f1f1f1;
+	padding: 20px;
+	text-align: center;
+}

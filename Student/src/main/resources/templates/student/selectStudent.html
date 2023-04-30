@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link th:href="@{/css/selectStudent.css}" rel="stylesheet">
+	<script th:src="@{/js/index.js}"></script>
+	<title>生徒照会</title>
+</head>
+
+<body>
+	<header>
+		<h1>生徒一覧</h1>
+	</header>
+
+	<table border="1" th:unless="${#lists.isEmpty(list)}" style="table-layout: fixed;">
+		<tr>
+			<th>ID</th>
+			<th>名前</th>
+			<th>生年月日</th>
+			<th>性別</th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<tr th:each="obj : ${list}" align="center">
+			<td th:text="${obj.MemberId}"></td>
+			<td th:text="${obj.name}" align="left"></td>
+			<td th:text="${obj.birthday}"></td>
+			<td th:text="${obj.gender} == '1'? '男':'女'"></td>
+			<!--/* 編集ボタン */-->
+			<td>
+				<form method="post" th:action="@{/selectStudent/update/{id}(id=${obj.MemberId})}">
+					<input type="submit" value="更新">
+				</form>
+			</td>
+			<!--/* 削除ボタン */-->
+			<td>
+				<form method="post" th:action="@{/deleteStudent/delete/{id}(id=${obj.MemberId})}" onclick="return buttonClick()">
+					<input type="submit" value="削除">
+				</form>
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+
+</html>

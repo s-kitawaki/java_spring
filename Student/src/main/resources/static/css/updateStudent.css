@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+}
+
+/*ヘッダー部分 */
+header {
+	background-color: #cccccc;
+	padding: 20px;
+	padding-left: 50px;
+}
+
+header h1 {
+	margin: 0;
+	color: white;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+/*テーブル部分*/
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	margin-top: 40px;
+
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+
+/*入力部分*/
+/*名前*/
+.name-text-area {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+
+.textbox-003-label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: .9em;
+}
+
+.textbox-003 {
+	width: 50%;
+	padding-top: 8px ;
+	padding-bottom: 8px;
+	border: none;
+	border-radius: 3px;
+	background: #eff1f5;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+.textbox-003::placeholder {
+	color: #333;
+}
+
+input[type="text"] {
+	position: relative;
+	padding: 0 10px;
+	width: 50%;
+	height: 36px;
+	border: 0;
+	background: #eff1f5;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #333;
+}
+
+
+/*生年月日*/
+.birth-input-area {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.birthday {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 36px;
+	border-radius: 3px;
+}
+
+input[type="date"] {
+	position: relative;
+	padding: 0 10px;
+	width: 100%;
+	height: 36px;
+	border: 0;
+	background: #eff1f5;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #333;
+}
+
+
+
+/*性別*/
+.gender-radio-area {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+input[type="radio"] {
+	accent-color: #cccccc;
+}
+
+.woman {
+	margin-left: 20px;
+}
+
+/*更新ボタン*/
+.submit-area {
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+input[type="submit"] {
+	background-color: #cccccc;
+	color: white;
+	border:none;
+	border-radius: 0.3rem;
+	padding:10px;
+	width:80px;
+}
+input[type="submit"]:hover {
+	background-color:#808080;
+}
+
+
+

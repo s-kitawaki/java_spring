@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+body {
+	margin: 0;
+}
+
+/*ヘッダー部分 */
+header {
+	background-color: #cccccc;
+	padding: 20px;
+	padding-left: 50px;
+}
+
+header h1 {
+	margin: 0;
+	color: white;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+
+.back-btn {
+	margin: 0;
+	color: white;
+	width: 100%;
+	max-width: 1280px;
+	margin: auto;
+}
+
+
+a {
+	position: relative;
+	display: inline-block;
+	transition: .3s;
+	text-decoration: none;
+	color: black;
+	padding: 30px;
+	padding-bottom: 0px;
+
+	text-align: center;
+}
+
+a::after {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	content: '';
+	width: 0;
+	height: 2px;
+	background-color: #cccccc;
+	transition: .3s;
+	transform: translateX(-50%);
+}
+
+a:hover::after {
+	width: 100%;
+}

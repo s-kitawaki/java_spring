@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link th:href="@{/css/afterStudent.css}" rel="stylesheet">
+	<title>完了画面</title>
+</head>
+
+<body>
+	<header>
+	<h1 th:text="${title}">タイトル</h1>
+	</header>
+	
+	<div class="back-btn">
+	<a th:href="@{${url}}">戻る</a>		
+	</div>
+
+</body>
+
+</html>

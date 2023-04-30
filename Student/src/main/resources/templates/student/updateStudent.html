@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link th:href="@{/css/updateStudent.css}" rel="stylesheet">
+	<script th:src="@{/js/index.js}"></script>
+	<title>生徒更新</title>
+</head>
+
+<body>
+	<header>
+		<h1>生徒情報を更新します</h1>
+	</header>
+
+	<table border="1" style="table-layout: fixed;">
+		<tr>
+			<th>ID</th>
+			<th>名前</th>
+			<th>生年月日</th>
+			<th>性別</th>
+		</tr>
+
+		<tr talign="center">
+			<td th:text="${memberId}"></td>
+			<td th:text="${name}" align="left"></td>
+			<td th:text="${birthday}"></td>
+			<td th:text="${gender} == '1'? '男':'女'"></td>
+		</tr>
+	</table>
+
+	<form th:action="@{/updateStudent/{id}(id=${memberId})}" th:object="${studentForm}" method="post">
+
+		<div class="name-text-area">
+			<label>
+				<span class="textbox-003-label">名前</span>
+				<input type="text" class="textbox-003" placeholder="名前" th:field="*{name}">
+				<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red">名前入力エラー</span>
+			</label>
+		</div>
+
+		<div class="birth-input-area">
+			<label for="birthday" class="birthday">
+				<span class="textbox-003-label">生年月日</span>
+				<input type="date" th:field="*{birthday}">
+				<span th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}" style="color: red">生年月日入力エラー</span>
+			</label>
+		</div>
+
+		<div class="gender-radio-area">
+			<label>
+				<span class="textbox-003-label">性別</span>
+				<input type="radio" value="1" th:field="*{gender}" class="man">男
+				<input type="radio" value="2" th:field="*{gender}" class="woman">女
+			</label>
+		</div>
+		<br>
+		<div class="submit-area">
+			<input type="submit" class="update" value="更新">
+		</div> 
+	</form>
+</body>
+
+</html>
