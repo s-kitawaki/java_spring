@@ -43,6 +43,8 @@ public class StudentServiceImpl implements StudentService {
 		}
 		return memberFlg;
 	}
+	
+	
 
 	@Override
 	public void deleteStudent(Integer id) {
